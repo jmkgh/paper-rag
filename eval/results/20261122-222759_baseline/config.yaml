@@ -1,0 +1,34 @@
+paths:
+  papers_csv: data/papers.csv
+  pdf_dir: data/pdfs
+  index_dir: data/index
+  questions: eval/questions.yaml
+  results_dir: eval/results
+embedding:
+  model: nomic-embed-text
+  use_prefixes: true
+  document_prefix: 'search_document: '
+  query_prefix: 'search_query: '
+llm:
+  model: ollama_chat/qwen2.5:7b
+  num_ctx: 8192
+  temperature: 0.0
+  max_tokens: 512
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 150
+retrieval:
+  top_k: 5
+_run:
+  index_collection: chunks-f0fe9a14
+  index_params:
+    embedding_model: nomic-embed-text
+    use_prefixes: true
+    document_prefix: 'search_document: '
+    query_prefix: 'search_query: '
+    chunk_size: 1000
+    chunk_overlap: 150
+  git_commit: 31002ee
+  timestamp: '2026-11-22T22:32:01'
+  n_questions: 18
+  retrieval_only: false

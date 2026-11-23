@@ -1,0 +1,33 @@
+# paper-rag configuration. Relative paths are resolved against this file's directory.
+
+paths:
+  papers_csv: data/papers.csv
+  pdf_dir: data/pdfs
+  index_dir: data/index
+  questions: eval/questions.yaml
+  results_dir: eval/results
+
+embedding:
+  model: nomic-embed-text
+  # nomic-embed-text is trained with task prefixes; toggle to compare in the evaluation.
+  use_prefixes: false
+  document_prefix: "search_document: "
+  query_prefix: "search_query: "
+
+llm:
+  # Any LiteLLM model string works, e.g. "ollama_chat/gemma3:12b" or an API model.
+  # "ollama_chat/" uses Ollama's /api/chat with the model's own chat template;
+  # LiteLLM's "ollama/" prefix flattens messages into a generic "### User:" prompt instead.
+  model: ollama_chat/qwen2.5:7b
+  # Ollama defaults to 4096 tokens and silently truncates longer prompts, so set it explicitly.
+  num_ctx: 8192
+  temperature: 0.0  # as deterministic as possible for evaluation
+  max_tokens: 512  # answer length budget, reserved inside num_ctx
+
+chunking:
+  # Measured in characters (no tokenizer needed); ~1000 chars is roughly 250 tokens.
+  chunk_size: 1000
+  chunk_overlap: 150  # 15 %
+
+retrieval:
+  top_k: 5

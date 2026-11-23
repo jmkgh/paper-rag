@@ -1,0 +1,161 @@
+# Evaluation questions.
+
+# Fields:
+#   id              unique question id
+#   question        the question as a user would ask it
+#   expected_paper  paper id from data/papers.csv, or null if the answer is NOT in the
+#                   collection (the assistant should then refuse)
+#   expected_pages  1-based PDF pages (not journal page numbers) that contain the answer
+#   notes           expected answer content and known pitfalls, used for manual rating
+
+questions:
+  # --- harfoot2014 -------------------------------------------------------------------
+  - id: q01
+    question: What range of body masses do the organisms simulated in the Madingley model span?
+    expected_paper: harfoot2014
+    expected_pages: [1]
+    notes: >-
+      10 µg to 150,000 kg, about 14 orders of magnitude. The PDF text layer reads
+      "10 mg" (µ set in a symbol font), so an answer quoting "10 mg" reproduces the
+      context faithfully but is factually wrong. Retrieval missed this chunk in an
+      early manual test.
+
+  - id: q02
+    question: Which ecological processes does the Madingley General Ecosystem Model represent for heterotrophs?
+    expected_paper: harfoot2014
+    expected_pages: [2]
+    notes: >-
+      Eating, metabolism, growth, reproduction, dispersal and mortality
+      (primary production for autotrophs). Page 2 has several chunks: a page-level
+      hit does not guarantee that the chunk containing this sentence was retrieved.
+
+  # --- krause2025 --------------------------------------------------------------------
+  - id: q03
+    question: How much does coupling LPJ-GUESS with Madingley change net primary productivity, leaf area index and carbon mass?
+    expected_paper: krause2025
+    expected_pages: [1, 6, 14]
+    notes: >-
+      NPP -5.2 %, LAI -9.0 %, carbon mass -9.7 % compared with stand-alone LPJ-GUESS;
+      largest carbon mass impact in boreal ecosystems (-42 %). The summary on p. 14
+      repeats the rounded numbers (page added after the first run cited it).
+
+  - id: q04
+    question: How is the coupled spin-up of LPJ-GUESS and the Madingley model organised?
+    expected_paper: krause2025
+    expected_pages: [4]
+    notes: >-
+      Independent spin-up first, then a 500-year coupled spin-up; during its first
+      50 years the herbivory-induced leaf biomass reduction is gradually increased,
+      after 50 years 100 % is passed to LPJ-GUESS (fully coupled).
+
+  - id: q05
+    question: How does herbivory change the composition of boreal forests in the coupled LPJ-GUESS-Madingley simulations?
+    expected_paper: krause2025
+    expected_pages: [1]
+    notes: >-
+      Shift from boreal coniferous forests (without animals) to boreal mixed forests
+      (with animals); general increase in herbaceous vegetation.
+
+  # --- meunier2017 -------------------------------------------------------------------
+  - id: q06
+    question: Which nutrient trait groups are proposed to link ecological stoichiometry and trait-based ecology?
+    expected_paper: meunier2017
+    expected_pages: [1]
+    notes: Four groups - acquisition, body stoichiometry, storage and excretion.
+
+  - id: q07
+    question: What does the Growth Rate Hypothesis in ecological stoichiometry state?
+    expected_paper: meunier2017
+    expected_pages: [3, 4]
+    notes: >-
+      Fast-growing species need more ribosomal RNA for protein synthesis, hence higher
+      P content and lower body N:P ratios.
+
+  # --- traulsen2023 ------------------------------------------------------------------
+  - id: q08
+    question: Which data source was used for the bibliometric analysis of evolutionary game theory?
+    expected_paper: traulsen2023
+    expected_pages: [2, 8]
+    notes: >-
+      Web of Science (2021 version) via the German Competence Centre for Bibliometrics
+      (Kompetenzzentrum Bibliometrie). The appendix on p. 8 describes the data
+      collection again (page added after the first run cited it).
+
+  - id: q09
+    question: What does the bibliometric analysis of evolutionary game theory show about the gender of the most central authors?
+    expected_paper: traulsen2023
+    expected_pages: [7]
+    notes: >-
+      The most central authors (by co-authorship) are male, as in earlier studies on
+      the Prisoner's Dilemma and cultural evolution; many fundamental contributions
+      were nevertheless made by women.
+
+  # --- leimar2023 --------------------------------------------------------------------
+  - id: q10
+    question: What did Maynard Smith and Price want to explain with the concept of an evolutionarily stable strategy?
+    expected_paper: leimar2023
+    expected_pages: [1]
+    notes: >-
+      Why conflicts between animals of the same species are usually of a 'limited war'
+      type without serious injury; game theory as an alternative to group selection.
+
+  - id: q11
+    question: In a symmetric Hawk-Dove game, when is the ESS pure Hawk and when is it a mixed strategy?
+    expected_paper: leimar2023
+    expected_pages: [4]
+    notes: >-
+      Pure Hawk if the value of winning exceeds the cost of injury in a Hawk-Hawk fight;
+      mixed (randomized) strategy for lower values of winning.
+
+  # --- yang2023 ----------------------------------------------------------------------
+  - id: q12
+    question: How do short and long time delays in species interactions affect community stability?
+    expected_paper: yang2023
+    expected_pages: [1, 2, 3]
+    notes: Large delays are typically destabilizing; short delays can substantially increase stability.
+
+  - id: q13
+    question: When species respond to each other with time delays, which type of species interactions makes communities most stable?
+    expected_paper: yang2023
+    expected_pages: [1, 6]
+    notes: Communities with mixed interaction types become the most stable class.
+
+  # --- glazier2022 -------------------------------------------------------------------
+  - id: q14
+    question: Which values of the metabolic scaling exponent b did traditional theory assume, and on what basis?
+    expected_paper: glazier2022
+    expected_pages: [1]
+    notes: >-
+      2/3 or 3/4, following 'natural law' based on physical constraints; 2/3 from the
+      'surface law' (Euclidean geometry of surfaces).
+
+  - id: q15
+    question: What does the metabolic-level boundaries hypothesis propose?
+    expected_paper: glazier2022
+    expected_pages: [6]
+    notes: >-
+      b depends on the overall metabolic level of an organism (elevation of the scaling
+      relationship), which depends on activity level, temperature and other factors.
+
+  # --- not in the collection: the assistant should answer "not found in the sources" --
+  - id: u01
+    question: What is the effect of nitrogen deposition on the carbon uptake of boreal forests?
+    expected_paper: null
+    expected_pages: null
+    notes: >-
+      Distractor - krause2025 p. 4 states that N deposition was held constant
+      (2 kg N/ha/yr) and discusses boreal carbon mass, but not this effect.
+
+  - id: u02
+    question: How do microplastics affect zooplankton feeding rates?
+    expected_paper: null
+    expected_pages: null
+    notes: Distractor - meunier2017 discusses zooplankton stoichiometry, nothing on microplastics.
+
+  - id: u03
+    question: Which neural network architecture is used to emulate the Madingley model?
+    expected_paper: null
+    expected_pages: null
+    notes: >-
+      Distractor - Madingley is covered by harfoot2014/krause2025, neural networks are
+      mentioned in traulsen2023, but no emulator exists in the collection.

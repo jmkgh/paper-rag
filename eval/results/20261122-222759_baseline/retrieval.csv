@@ -1,0 +1,19 @@
+id,question,expected_paper,expected_pages,paper_rank,page_rank,top_hits,top_scores
+q01,What range of body masses do the organisms simulated in the Madingley model span?,harfoot2014,1,2,,krause2025:2 harfoot2014:5 harfoot2014:20 krause2025:9 krause2025:8,0.765 0.754 0.745 0.742 0.740
+q02,Which ecological processes does the Madingley General Ecosystem Model represent for heterotrophs?,harfoot2014,2,1,1,harfoot2014:2 harfoot2014:20 harfoot2014:2 harfoot2014:10 harfoot2014:1,0.821 0.817 0.815 0.797 0.794
+q03,"How much does coupling LPJ-GUESS with Madingley change net primary productivity, leaf area index and carbon mass?",krause2025,1 6 14,1,2,krause2025:3 krause2025:14 krause2025:4 krause2025:14 krause2025:3,0.775 0.770 0.768 0.766 0.766
+q04,How is the coupled spin-up of LPJ-GUESS and the Madingley model organised?,krause2025,4,1,3,krause2025:3 krause2025:14 krause2025:4 krause2025:14 krause2025:10,0.767 0.748 0.743 0.736 0.726
+q05,How does herbivory change the composition of boreal forests in the coupled LPJ-GUESS-Madingley simulations?,krause2025,1,1,,krause2025:14 krause2025:4 krause2025:2 krause2025:14 krause2025:6,0.835 0.829 0.824 0.819 0.819
+q06,Which nutrient trait groups are proposed to link ecological stoichiometry and trait-based ecology?,meunier2017,1,1,1,meunier2017:1 meunier2017:1 meunier2017:1 meunier2017:2 meunier2017:5,0.881 0.857 0.823 0.819 0.816
+q07,What does the Growth Rate Hypothesis in ecological stoichiometry state?,meunier2017,3 4,1,1,meunier2017:4 meunier2017:7 meunier2017:1 harfoot2014:11 meunier2017:6,0.818 0.816 0.815 0.811 0.793
+q08,Which data source was used for the bibliometric analysis of evolutionary game theory?,traulsen2023,2 8,1,1,traulsen2023:8 traulsen2023:8 traulsen2023:7 traulsen2023:1 traulsen2023:2,0.797 0.785 0.768 0.762 0.753
+q09,What does the bibliometric analysis of evolutionary game theory show about the gender of the most central authors?,traulsen2023,7,1,1,traulsen2023:7 traulsen2023:2 traulsen2023:10 traulsen2023:1 traulsen2023:7,0.851 0.774 0.752 0.752 0.746
+q10,What did Maynard Smith and Price want to explain with the concept of an evolutionarily stable strategy?,leimar2023,1,1,1,leimar2023:1 leimar2023:2 leimar2023:3 leimar2023:2 leimar2023:3,0.805 0.756 0.739 0.738 0.726
+q11,"In a symmetric Hawk-Dove game, when is the ESS pure Hawk and when is it a mixed strategy?",leimar2023,4,1,1,leimar2023:4 leimar2023:2 leimar2023:3 leimar2023:1 leimar2023:4,0.716 0.692 0.652 0.651 0.647
+q12,How do short and long time delays in species interactions affect community stability?,yang2023,1 2 3,1,1,yang2023:3 yang2023:1 yang2023:5 yang2023:5 yang2023:2,0.876 0.868 0.856 0.853 0.850
+q13,"When species respond to each other with time delays, which type of species interactions makes communities most stable?",yang2023,1 6,1,2,yang2023:5 yang2023:6 yang2023:5 yang2023:7 yang2023:6,0.880 0.872 0.865 0.858 0.857
+q14,"Which values of the metabolic scaling exponent b did traditional theory assume, and on what basis?",glazier2022,1,1,1,glazier2022:1 glazier2022:1 glazier2022:2 glazier2022:4 glazier2022:5,0.851 0.849 0.829 0.827 0.821
+q15,What does the metabolic-level boundaries hypothesis propose?,glazier2022,6,1,1,glazier2022:6 glazier2022:7 glazier2022:8 glazier2022:9 glazier2022:8,0.811 0.764 0.761 0.748 0.743
+u01,What is the effect of nitrogen deposition on the carbon uptake of boreal forests?,,,,,krause2025:12 krause2025:1 krause2025:12 krause2025:6 krause2025:6,0.736 0.725 0.722 0.720 0.715
+u02,How do microplastics affect zooplankton feeding rates?,,,,,meunier2017:7 meunier2017:6 meunier2017:3 meunier2017:3 glazier2022:8,0.715 0.689 0.687 0.686 0.683
+u03,Which neural network architecture is used to emulate the Madingley model?,,,,,krause2025:2 harfoot2014:20 krause2025:14 krause2025:3 krause2025:16,0.706 0.703 0.701 0.697 0.691
