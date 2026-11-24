@@ -1,4 +1,5 @@
 # paper-rag
+[![CI](https://github.com/jmkgh/paper-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/jmkgh/paper-rag/actions/workflows/ci.yml)
 
 A small, fully local RAG (retrieval-augmented generation) assistant that answers
 questions about a collection of open-access papers on ecological modelling and
